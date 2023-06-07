@@ -286,7 +286,7 @@ console.log(strReverse); */
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la longueur de la string. Incice : la méthode length() permet de récupérer la longueur d'une string.
 
-const tab = ["Hello", "World", "Test", "Salut", "Yo"];
+/* const tab = ["Hello", "World", "Test", "Salut", "Yo"];
 const tabFilter = () => {
   result = tab.filter((e) => {
     return e.length >= 5;
@@ -294,7 +294,7 @@ const tabFilter = () => {
   return result;
 };
 
-console.log(tabFilter());
+console.log(tabFilter()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -308,7 +308,14 @@ console.log(tabFilter());
 //   return accumulateur + element
 // }, 0)
 
-// CODE ICI
+/* const monTableau = [5, 10, 9];
+
+const sommeTab = () => {
+  result = monTableau.reduce((prev, curr) => prev + curr, 0);
+  return result;
+};
+
+console.log(sommeTab()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -322,7 +329,14 @@ console.log(tabFilter());
 // const monTableauConcat = monTableau1.concat(monTableau2)
 // console.log(monTableauConcat) // ["Hello", "World", "Test", "Salut"]
 
-// CODE ICI
+/* const tab = ["Hello", "World"];
+const tab2 = ["Test", "Salut"];
+
+const tabFinal = () => {
+  return tab.concat(tab2);
+};
+
+console.log(tabFinal()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -332,7 +346,11 @@ console.log(tabFilter());
 // Exemple : ["Poulet", "Chat", "Chien", "Cheval"] => ["Poulet", "Chien", "Cheval"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la présence de la lettre "e". Indice : la méthode includes() permet de savoir si une string contient une lettre ou un mot.
 
-// CODE ICI
+/* const tab = ["Poulet", "Chat", "Chien", "Cheval"];
+const newTab = () => {
+  return tab.filter((tabFilter) => tabFilter.includes("e"));
+};
+console.log(newTab()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -342,6 +360,31 @@ console.log(tabFilter());
 // Exemple : [ 2, 9, 6, 5, 6] => [2, 6, 6]
 // Indice : il y a plusieurs façon de faire, soit avec un for, soit avec la méthode filter() une fois ça fait utilise la méthode sort() qui permet de trier un tableau.
 
-// CODE ICI
+/* const tabNum = [6, 10, 2, 5, 6];
+const tabFiltered = () => {
+  const byValue = (a, b) => a - b;
+  const even = tabNum.filter((num) => num % 2 === 0);
+  const sorted = even.sort(byValue);
+  return sorted;
+};
+console.log(tabFiltered()); */
+
+// La ligne byValue = (a, b) => a - b; permet de trier les nombres pairs dans l'ordre croissant en utilisant une fonction de comparaison.
+// La fonction de comparaison (a, b) => a - b compare deux nombres a et b en soustrayant b de a. Si le résultat est négatif, cela signifie que a est inférieur à b et les nombres restent dans cet ordre. Si le résultat est positif, cela signifie que a est supérieur à b et les nombres sont échangés. Si le résultat est 0, cela signifie que a et b sont égaux et leur ordre est conservé.
+// Ainsi, en utilisant cette fonction de comparaison avec sort(), les nombres pairs seront triés en ordre croissant.
 
 //----------------------------------------------------------------------------------------------//
+
+// EXERCICE 20
+
+// Créer une fonction qui prend un nombre qui représente le nombre de tours d'un jeu de roulette et renvoie un tableau avec les numéros de chaque tour.
+//exemple : roulette(5) ➞ [1, 2, 3, 4, 5]
+
+/* const tab = [];
+const roulette = (num) => {
+  for (let i = 1; i <= num; i++) {
+    tab.push(i);
+  }
+  return tab;
+};
+console.log(roulette(5)); */
