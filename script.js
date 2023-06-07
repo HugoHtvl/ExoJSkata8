@@ -10,12 +10,12 @@
 // }
 // console.log(nomDeMaFonction(On remplace le paramètre par ce qu'on désire)) //
 
-const multiply = (a, b) => {
+/* const multiply = (a, b) => {
   const result = a * b;
   return result;
 };
 
-console.log(multiply(10, 30));
+console.log(multiply(10, 30)); */
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 2
@@ -26,7 +26,12 @@ console.log(multiply(10, 30));
 // const monTableau = [1, 2, 3]
 // console.log(monTableau[0]) // 1
 
-// CODE ICI
+/* const monTableau = [1, 2, 3];
+const tab = (e) => {
+  return e;
+};
+
+console.log(tab(monTableau[0])); */
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 3
@@ -38,7 +43,13 @@ console.log(multiply(10, 30));
 // monTableau.pop()
 // console.log(monTableau) // [1, 2]
 
-// CODE ICI
+/* const monTableau = [1, 2, 3];
+const supp = () => {
+  monTableau.pop();
+  return monTableau;
+};
+
+console.log(supp()); */
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -51,7 +62,16 @@ console.log(multiply(10, 30));
 //   console.log(monTableau[i]) // 1, 2, 3
 // }
 
-// CODE ICI
+/* const monTableau = [1, 2, 3];
+const sommeTab = () => {
+  let sum = 0;
+  for (let i = 0; i < monTableau.length; i++) {
+    sum += monTableau[i];
+  }
+  return sum;
+};
+
+console.log(sommeTab()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -66,7 +86,15 @@ console.log(multiply(10, 30));
 // console.log(monTableauInverse) // ["o", "l", "l", "e", "H"]
 //Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
 
-// CODE ICI
+/* const String = "Hello";
+const Prenom = "Hugo";
+
+const reverse = (e) => {
+  result = e.split("").reverse().join("");
+  return result;
+};
+
+console.log(reverse(String)); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -77,7 +105,13 @@ console.log(multiply(10, 30));
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
 
-// CODE ICI
+/* const monTableau = [1, 2, 3];
+const numberMax = () => {
+  const max = Math.max(...monTableau);
+  return max;
+};
+
+console.log(numberMax()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -88,7 +122,13 @@ console.log(multiply(10, 30));
 // const monTableau = [1, 2, 3]
 // console.log(Math.min(...monTableau)) // 1
 
-// CODE ICI
+/* const monTableau = [1, 2, 3];
+const numberMin = () => {
+  const min = Math.min(...monTableau);
+  return min;
+};
+
+console.log(numberMin()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -104,7 +144,17 @@ console.log(multiply(10, 30));
 //   return element !== "e" && element !== "o"
 // })
 
-// CODE ICI
+/* const string = "Hello";
+const noVoyelle = (e) => {
+  const tab = e.split("");
+  const voyelleOff = tab.filter((element) => {
+    return element != "e" && element != "o";
+  });
+  const final = voyelleOff.join();
+  return final;
+};
+
+console.log(noVoyelle(string)); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -116,7 +166,13 @@ console.log(multiply(10, 30));
 // const monTableau = [1, 3, 2]
 // console.log(monTableau.sort()) // [1, 2, 3]
 
-// CODE ICI
+/* const monTableau = [1, 3, 2];
+const tab = () => {
+  const tabOrder = monTableau.sort();
+  return tabOrder;
+};
+
+console.log(tab()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -133,7 +189,17 @@ console.log(multiply(10, 30));
 // }
 // console.log(monTableau) // ["Hello", "elloH", "lloHe", "loHel", "oHell"]
 
-// CODE ICI
+/* const str = "Hello";
+const tab = [];
+const tabRotate = () => {
+  for (let i = 0; i < str.length; i++) {
+    const add = str.substring(i) + str.substring(0, i);
+    tab.push(add);
+  }
+  return tab;
+};
+
+console.log(tabRotate()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -147,7 +213,15 @@ console.log(multiply(10, 30));
 //   return element + 1
 // })
 
-// CODE ICI
+/* const monTableau = [1, 2, 3];
+const monTab = () => {
+  for (let i = 0; i < monTableau.length; i++) {
+    monTableau[i] += 1;
+  }
+  return monTableau;
+};
+
+console.log(monTab()); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -161,7 +235,12 @@ console.log(multiply(10, 30));
 //   return element.length
 // })
 
-// CODE ICI
+/* const str = ["Hello", "World"];
+const countStr = str.map((e) => {
+  return e.length;
+});
+
+console.log(countStr); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -176,7 +255,13 @@ console.log(multiply(10, 30));
 //   return element.charAt(0)
 // })
 
-// CODE ICI
+/* const str = ["Hugo", "Hattenville"];
+const firstLetter = str.map((e) => {
+  result = e.charAt(0);
+  return result;
+});
+
+console.log(firstLetter); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -186,7 +271,12 @@ console.log(multiply(10, 30));
 // Exemple : ["Hello", "World"] => ["o", "d"]
 // Indice regarde l'exercice 13, c'est exactement la même chose sauf qu'il faut récupérer la dernière lettre et non la première.
 
-// CODE ICI
+/* const str = ["Hugo", "Hattenville"];
+const strReverse = str.map((e) => {
+  result = e.charAt(e.length - 1);
+  return result;
+});
+console.log(strReverse); */
 
 //----------------------------------------------------------------------------------------------//
 
@@ -196,7 +286,15 @@ console.log(multiply(10, 30));
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la longueur de la string. Incice : la méthode length() permet de récupérer la longueur d'une string.
 
-// CODE ICI
+const tab = ["Hello", "World", "Test", "Salut", "Yo"];
+const tabFilter = () => {
+  result = tab.filter((e) => {
+    return e.length >= 5;
+  });
+  return result;
+};
+
+console.log(tabFilter());
 
 //----------------------------------------------------------------------------------------------//
 
