@@ -388,3 +388,131 @@ const roulette = (num) => {
   return tab;
 };
 console.log(roulette(5)); */
+
+// EXERCICE 21
+
+// Crée une fonction qui renvoie la longueur du ou des mots les plus courts dans une phrase.
+// La chaîne ne sera jamais vide et vous n'avez pas besoin de tenir compte des différents types de données.
+// Exemple :
+// findShort("Prachett is the best author in the world ") // 2
+// findShort("The quick brown fox jumps over the lazy dog") // 3
+
+// Indice : la méthode split() permet de transformer une string en tableau en fonction d'un séparateur :
+// const maString = "Hello World"
+// const monTableau = maString.split(" ")
+// console.log(monTableau) // ["Hello", "World"]
+// Indice 2 :  Oublie pas de boucler sur le tableau pour récupérer la longueur de chaque mot. Que soit avec un for ou avec la méthode map().
+// Indice 3 : Pour récupérer le mot le plus court tu dois voir la longueur de chaque mot, quel méthode permet de récupérer la longueur d'une string ?
+// Indice 4 : Pour récupérer le mot le plus court tu dois le trier, quel méthode permet de trier un tableau ? Si tu as utilisé la méthode map() pour récupérer la longueur de chaque mot, tu peux utiliser la méthode sort() directement sur le tableau que tu as récupéré avec la méthode map().
+// Indice 5 : Le .sort() trie les nombres en fonction de leur valeur unicode, pour trier des nombres il faut utiliser une fonction de comparaison :
+// const monTableau = [1, 2, 3, 4, 5]
+// const monTableauTri = monTableau.sort((a, b) => {
+//   return a - b
+// })
+// Indice 6 : Pour récupérer le premier élément d'un tableau tu peux utiliser la notation crochet : monTableau[0]
+
+// const str = "Hello World my name is Hugo";
+// const tab = str.split(" ");
+
+// const tabFinal = () => {
+//   const tabLong = tab.map((e) => {
+//     return e.length;
+//   });
+//   const tabTri = tabLong.sort((a, b) => {
+//     return a - b;
+//   });
+//   return tabTri[0];
+// };
+
+// console.log(tabFinal());
+
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//--------------------------------------SOLUTIONS-----------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+
+// const findShort = (phrase) => {
+//   let tableau = phrase.split(" ");
+//     let tableauLongueur = tableau.map((element) => {
+//         return element.length
+//         }
+//     )
+//     let tableauTri = tableauLongueur.sort((a, b) => {
+//         return a - b
+//     }
+//     )
+//     return tableauTri[0]
+// }
+
+// console.log(findShort("Prachett is the best author in the world"))
+
+//----------------------------------------------------------------------------------------------//
+
+// EXERCICE 21
+
+// Écrivez une fonction `anagram` qui prend deux chaînes et renvoie un booléen indiquant si les chaînes sont des anagrammes l'une de l'autre. Deux chaînes sont des anagrammes l'une de l'autre si elles contiennent les caractères, quel que soit l'ordre des caractères. Par exemple, "listen" et "silent" sont des anagrammes l'une de l'autre
+
+// Indice : Oubliez pas de transformer les string en tableau pour pouvoir les trier et les comparer. Utilisez la méthode split() pour transformer une string en tableau et la méthode sort() pour trier un tableau. Puis comparez les deux tableaux avec la méthode join() qui permet de transformer un tableau en string.
+
+// CODE ICI
+
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//--------------------------------------SOLUTIONS-----------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+
+// const anagram = (string1, string2) => {
+//     let tableau1 = string1.split("")
+//     let tableau2 = string2.split("")
+//     let tableau1Tri = tableau1.sort()
+//     let tableau2Tri = tableau2.sort()
+//     if (tableau1Tri.join("") === tableau2Tri.join("")) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// console.log(anagram("listen", "silent"))
+
+//----------------------------------------------------------------------------------------------//
+
+// EXERCICE 22
+
+// Écrivez une fonction qui enlève les doubles lettres d'une chaîne donnée. Par exemple, "google" deviendrait "gogle"
+// Par exemple :
+// removeDoubleLetters("google") // "gogle"
+// removeDoubleLetters("Hello World!") // "Helo World!"
+// Indice : Afin de supprimer les doubles lettres, vous devez parcourir la chaîne et comparer chaque caractère avec le caractère suivant. Si les deux caractères sont identiques, vous devez supprimer le deuxième caractère. Donc pour pouvoir comporaer chaque caractère avec le suivant, vous devez transformer la string en tableau.
+// Indice 2 : Pour supprimer un élément d'un tableau vous pouvez utiliser la méthode splice() combiné à une boucle ou la méthode filter() qui permet de filtrer un tableau en fonction d'une condition.
+
+// CODE ICI
+
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//--------------------------------------SOLUTIONS-----------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+
+// const removeDoubleLetters = (string) => {
+//     let tableau = string.split("")
+//     let tableauFiltre = tableau.filter((element, index) => {
+//         return element !== tableau[index + 1]
+//     })
+//     return tableauFiltre.join("")
+// }
+
+// console.log(removeDoubleLetters("google"))
+
+// const removeDoubleLetters = (string) => {
+//     let tableau = string.split("")
+//     for (let i = 0; i < tableau.length; i++) {
+//         if (tableau[i] === tableau[i + 1]) {
+//             tableau.splice(i, 1)
+//         }
+//     }
+//     return tableau.join("")
+// }
+// console.log(removeDoubleLetters("google"))
