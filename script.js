@@ -389,6 +389,8 @@ const roulette = (num) => {
 };
 console.log(roulette(5)); */
 
+//----------------------------------------------------------------------------------------------//
+
 // EXERCICE 21
 
 // Crée une fonction qui renvoie la longueur du ou des mots les plus courts dans une phrase.
@@ -449,7 +451,7 @@ console.log(roulette(5)); */
 
 //----------------------------------------------------------------------------------------------//
 
-// EXERCICE 21
+// EXERCICE 22
 
 // Écrivez une fonction `anagram` qui prend deux chaînes et renvoie un booléen indiquant si les chaînes sont des anagrammes l'une de l'autre. Deux chaînes sont des anagrammes l'une de l'autre si elles contiennent les caractères, quel que soit l'ordre des caractères. Par exemple, "listen" et "silent" sont des anagrammes l'une de l'autre
 
@@ -479,7 +481,7 @@ console.log(roulette(5)); */
 
 //----------------------------------------------------------------------------------------------//
 
-// EXERCICE 22
+// EXERCICE 23
 
 // Écrivez une fonction qui enlève les doubles lettres d'une chaîne donnée. Par exemple, "google" deviendrait "gogle"
 // Par exemple :
@@ -516,3 +518,5 @@ console.log(roulette(5)); */
 //     return tableau.join("")
 // }
 // console.log(removeDoubleLetters("google"))
+
+//----------------------------------------------------------------------------------------------//
