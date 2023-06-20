@@ -549,7 +549,15 @@ console.log(roulette(5)); */
 // createPhoneNumber([1,2,3,4,5,6,7,8,9,0]) // "(123) 456-7890"
 // Indice : Utilisez la méthode slice() pour découper le tableau en plusieurs morceaux. Puis utilisez la méthode join() pour transformer un tableau en string.
 
-// CODE ICI
+// const tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// const createPhoneNumber = (e) => {
+//   let part1 = e.slice(0, 3);
+//   let part2 = e.slice(3, 6);
+//   let part3 = e.slice(6, 10);
+//   return `(${part1.join("")}) ${part2.join("")}-${part3.join("")}`;
+// };
+
+// console.log(createPhoneNumber(tab));
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
@@ -578,7 +586,19 @@ console.log(roulette(5)); */
 // Indice 2 : Vous pouvez utiliser la méthode fromCharCode() pour récupérer un caractère à partir de son code unicode.  Exemple : String.fromCharCode(65) renvoie "A". Mais attention à refaire la boucle dans l'autre sens pour pouvoir comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants.
 // Indice 3 : Il y a plus cas comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants pour trouver le caractère manquant avec une condition if. Et retourner le caractère manquant avec un return et la méthode fromCharCode().
 
-// CODE ICI
+// const tab = ["a", "b", "c", "d", "f"];
+// const findMissingLetter = (tableau) => {
+//   // Parcours du tableau de lettres
+//   for (let i = 0; i < tableau.length - 1; i++) {
+//     // Vérification si le code Unicode du caractère actuel + 1 est différent du code Unicode du caractère suivant
+//     if (tableau[i].charCodeAt() + 1 !== tableau[i + 1].charCodeAt()) {
+//       // Retourne le caractère manquant en utilisant String.fromCharCode()
+//       return String.fromCharCode(tableau[i].charCodeAt() + 1);
+//     }
+//   }
+// };
+
+// console.log(findMissingLetter(tab));
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
