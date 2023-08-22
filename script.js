@@ -542,7 +542,7 @@ console.log(roulette(5)); */
 
 //----------------------------------------------------------------------------------------------//
 
-// EXERCICE 23
+// EXERCICE 24
 
 //Écrivez une fonction qui prend un tableau de 10 entiers (entre 0 et 9) et renvoie une chaîne de caractères sous la forme d'un numéro de téléphone.
 // Exemple :
@@ -576,7 +576,7 @@ console.log(roulette(5)); */
 
 //----------------------------------------------------------------------------------------------//
 
-// EXERCICE 24
+// EXERCICE 25
 
 //Écrivez une fonction nommée "findMissingLetter" qui prend en paramètre un tableau d'une série de lettres (en tant que chaînes de caractères) et qui renvoie la lettre manquante de la série. Si aucune lettre n'est manquante, la fonction doit renvoyer "undefined".
 // Exemple :
@@ -619,3 +619,41 @@ console.log(roulette(5)); */
 // console.log(findMissingLetter(["a","b","c","d","f"]))
 
 //----------------------------------------------------------------------------------------------//
+
+// EXERCICE 26
+
+//Écrivez une fonction qui prend un tableau de string et renvoie un tableau de string triées par ordre alphabétique.
+// Exemple :
+// sortString(["Banana", "Orange", "Apple", "Mango"]) // ["Apple", "Banana", "Mango", "Orange"]
+// sortString(["lait", "beurre", "fromage", "yaourt"]) // ["beurre", "fromage", "lait", "yaourt"]
+
+//Indice : Vous pouvez utiliser la méthode sort() pour trier un tableau. Mais attention, par défaut la méthode sort() trie les éléments d'un tableau par ordre alphabétique en se basant sur les codes unicode des caractères. Donc si vous utilisez la méthode sort() sur un tableau de string, les éléments seront triés par ordre alphabétique en se basant sur les codes unicode des caractères. Par exemple, "Banana" sera considéré comme plus petit que "Orange" car le code unicode de "B" est plus petit que le code unicode de "O". Pour trier un tableau de string par ordre alphabétique en se basant sur l'ordre alphabétique des lettres, vous devez utiliser une fonction de comparaison en paramètre de la méthode sort().
+// Indice 2 : Pour trier un tableau de string par ordre alphabétique en se basant sur l'ordre alphabétique des lettres, vous devez utiliser une fonction de comparaison en paramètre de la méthode sort(). Cette fonction de comparaison prend deux paramètres (a et b) et renvoie un nombre négatif si a est plus petit que b, un nombre positif si a est plus grand que b et 0 si a est égal à b.
+
+// const crescentWord = (a) => {
+//   return a.sort(function (x, y) {
+//     return x.toString().localeCompare(y.toString());
+//   });
+// };
+
+// console.log(crescentWord(["lait", "beurre", "fromage", "yaourt"]));
+
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//--------------------------------------SOLUTIONS-----------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
+
+// const sortString = (tableau) => {
+//     return tableau.sort((a, b) => {
+//         if (a.toLowerCase() < b.toLowerCase()) {
+//             return -1
+//         }
+//         if (a.toLowerCase() > b.toLowerCase()) {
+//             return 1
+//         }
+//         return 0
+//     })
+// }
+
+// console.log(sortString(["Banana", "Orange", "Apple", "Mango"]))
